@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questão 5 — Extensão do TAD: Implementação do Método buscar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="nav-back">← Voltar ao Sumário de Questões</a>
+
+    <header class="page-header">
+      <div class="discipline-title">INF1927 — Árvores e Ordenação de Dados</div>
+      <div class="header-badges">
+        <span class="badge badge-dark">Questão 05</span>
+      </div>
+      <h1>Extensão do TAD: Implementação do Método buscar</h1>
+      <p class="subtitle">Adição e teste de operações de busca de chaves na classe BST.</p>
+    </header>
+
+    <section class="card">
+      <h2 class="card-title">Contexto da Implementação</h2>
+      <p class="statement">
+        Como extensão ao TAD original de <code>src/BST.java</code>, adicione a funcionalidade de busca por chaves na árvore.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">Itens de Avaliação</h2>
+      <ul class="subquestions-list">
+        <li class="subquestion-item">
+          <div class="subquestion-title">Implementação do Método de Busca</div>
+          <div class="subquestion-desc">
+            Adicione à sua classe <code>BST</code> o método de busca:
+            <div class="vscode-editor code-snippet" aria-labelledby="buscar-code-title">
+              <div class="vscode-tabs">
+                <div class="vscode-tab" id="buscar-code-title">
+                  <span class="java-file-icon" aria-hidden="true">J</span>
+                  BST.java
+                </div>
+              </div>
+              <div class="vscode-code" role="region" aria-label="Método buscar">
+                <ol>
+                  <li><code><span class="syn-keyword">public</span> <span class="syn-keyword">boolean</span> <span class="syn-method">buscar</span>(<span class="syn-type">Integer</span> <span class="syn-variable">chave</span>)</code></li>
+                </ol>
+              </div>
+            </div>
+            Apresente a sua implementação e explique as condições de parada (quando a chave é encontrada e quando se chega a uma referência nula indicando que a chave não existe).
+          </div>
+        </li>
+
+        <li class="subquestion-item">
+          <div class="subquestion-title">Estratégia Recursiva vs Iterativa</div>
+          <div class="subquestion-desc">
+            Você implementou a busca de forma recursiva ou iterativa (com laço <code>while</code>)?
+            <ul style="margin: 0.5rem 0 0 1.5rem;">
+              <li>Explique a lógica escolhida para a sua implementação.</li>
+              <li>Se você implementou de forma recursiva, como converteria para iterativa (ou vice-versa)?</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="subquestion-item">
+          <div class="subquestion-title">Busca do Menor e Maior Valor</div>
+          <div class="subquestion-desc">
+            Como você implementaria métodos adicionais <code>public Integer buscarMenor()</code> e <code>public Integer buscarMaior()</code> aproveitando as propriedades da Árvore Binária de Busca?
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="page-footer">
+      UNICAP — Universidade Católica de Pernambuco | Disciplina: INF1927 — Árvores e Ordenação de Dados
+    </footer>
+  </div>
+</body>
+</html>

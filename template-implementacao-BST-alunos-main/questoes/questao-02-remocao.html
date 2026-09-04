@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questão 2 — Implementação da Remoção e os Três Casos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="nav-back">← Voltar ao Sumário de Questões</a>
+
+    <header class="page-header">
+      <div class="discipline-title">INF1927 — Árvores e Ordenação de Dados</div>
+      <div class="header-badges">
+        <span class="badge badge-dark">Questão 02</span>
+      </div>
+      <h1>Implementação da Remoção e os Três Casos</h1>
+      <p class="subtitle">Explicação e defesa da lógica de remoção implementada no arquivo BST.java.</p>
+    </header>
+
+    <section class="card">
+      <h2 class="card-title">Contexto da Implementação</h2>
+      <p class="statement code-context">No arquivo <code>src/BST.java</code>, você deve implementar os métodos de remoção:</p>
+      <div class="vscode-editor code-snippet" aria-labelledby="remocao-code-title">
+        <div class="vscode-tabs">
+          <div class="vscode-tab" id="remocao-code-title">
+            <span class="java-file-icon" aria-hidden="true">J</span>
+            BST.java
+          </div>
+        </div>
+        <div class="vscode-code" role="region" aria-label="Métodos de remoção">
+          <ol>
+            <li><code><span class="syn-keyword">public</span> <span class="syn-keyword">void</span> <span class="syn-method">remover</span>(<span class="syn-type">Integer</span> <span class="syn-variable">chave</span>)</code></li>
+            <li><code><span class="syn-keyword">private</span> <span class="syn-type">No</span> <span class="syn-method">remover</span>(<span class="syn-type">No</span> <span class="syn-variable">no</span>, <span class="syn-type">Integer</span> <span class="syn-variable">chave</span>)</code></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">Itens de Avaliação</h2>
+      <ul class="subquestions-list">
+        <li class="subquestion-item">
+          <div class="subquestion-title">Caso 1 (Nó Folha) e Caso 2 (Nó com 1 Filho)</div>
+          <div class="subquestion-desc">
+            Mostre no seu código como você tratou:
+            <ul style="margin: 0.5rem 0 0 1.5rem;">
+              <li>A remoção de um nó que não possui nenhum filho (folha).</li>
+              <li>A remoção de um nó que possui apenas um filho (esquerdo ou direito), explicando como a sua implementação faz esse filho "subir" para a posição do nó removido.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="subquestion-item">
+          <div class="subquestion-title">Caso 3 (Nó com 2 Filhos)</div>
+          <div class="subquestion-desc">
+            Explique passo a passo como o seu método <code>remover</code> procede quando o nó a ser excluído possui dois filhos:
+            <ul style="margin: 0.5rem 0 0 1.5rem;">
+              <li>Como o nó substituto é obtido?</li>
+              <li>Como o valor da chave é copiado?</li>
+              <li>Como o nó substituto original é removido da subárvore para evitar duplicações?</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="subquestion-item">
+          <div class="subquestion-title">Remoção da Raiz e Elementos Inexistentes</div>
+          <div class="subquestion-desc">
+            Com base na sua implementação:
+            <ul style="margin: 0.5rem 0 0 1.5rem;">
+              <li>O que acontece quando a chave solicitada para remoção pertence ao nó raiz da árvore?</li>
+              <li>O que a sua implementação faz quando a chave informada não existe na árvore? O código trata esse caso sem gerar exceções inesperadas (como <code>NullPointerException</code>)?</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="page-footer">
+      UNICAP — Universidade Católica de Pernambuco | Disciplina: INF1927 — Árvores e Ordenação de Dados
+    </footer>
+  </div>
+</body>
+</html>

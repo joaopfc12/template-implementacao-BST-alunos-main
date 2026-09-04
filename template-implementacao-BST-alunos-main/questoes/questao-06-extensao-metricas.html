@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questão 6 — Extensão do TAD: Métodos de Altura e Contagem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="nav-back">← Voltar ao Sumário de Questões</a>
+
+    <header class="page-header">
+      <div class="discipline-title">INF1927 — Árvores e Ordenação de Dados</div>
+      <div class="header-badges">
+        <span class="badge badge-dark">Questão 06</span>
+      </div>
+      <h1>Extensão do TAD: Métodos de Altura e Contagem</h1>
+      <p class="subtitle">Adição de métodos para medição de propriedades estruturais da árvore em Java.</p>
+    </header>
+
+    <section class="card">
+      <h2 class="card-title">Contexto da Implementação</h2>
+      <p class="statement">
+        Como extensão prática ao código desenvolvido em <code>src/BST.java</code>, adicione métodos para calcular a altura e a quantidade total de nós da árvore binária.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">Itens de Avaliação</h2>
+      <ul class="subquestions-list">
+        <li class="subquestion-item">
+          <div class="subquestion-title">Implementação do Método <code>altura()</code></div>
+          <div class="subquestion-desc">
+            Adicione à sua classe <code>BST</code> o método de cálculo de altura:
+            <div class="vscode-editor code-snippet" aria-labelledby="altura-code-title">
+              <div class="vscode-tabs">
+                <div class="vscode-tab" id="altura-code-title">
+                  <span class="java-file-icon" aria-hidden="true">J</span>
+                  BST.java
+                </div>
+              </div>
+              <div class="vscode-code" role="region" aria-label="Métodos de cálculo da altura">
+                <ol>
+                  <li><code><span class="syn-keyword">public</span> <span class="syn-keyword">int</span> <span class="syn-method">altura</span>()</code></li>
+                  <li><code><span class="syn-keyword">private</span> <span class="syn-keyword">int</span> <span class="syn-method">altura</span>(<span class="syn-type">No</span> <span class="syn-variable">no</span>)</code></li>
+                </ol>
+              </div>
+            </div>
+            Mostre a sua implementação em Java, explicando o caso base (quando <code>no == null</code> retornando <code>-1</code>) e como o retorno das subárvores esquerda e direita é combinado.
+          </div>
+        </li>
+
+        <li class="subquestion-item">
+          <div class="subquestion-title">Implementação do Método <code>contarNos()</code></div>
+          <div class="subquestion-desc">
+            Adicione à sua classe <code>BST</code> o método para contagem total de nós:
+            <div class="vscode-editor code-snippet" aria-labelledby="contar-nos-code-title">
+              <div class="vscode-tabs">
+                <div class="vscode-tab" id="contar-nos-code-title">
+                  <span class="java-file-icon" aria-hidden="true">J</span>
+                  BST.java
+                </div>
+              </div>
+              <div class="vscode-code" role="region" aria-label="Métodos de contagem dos nós">
+                <ol>
+                  <li><code><span class="syn-keyword">public</span> <span class="syn-keyword">int</span> <span class="syn-method">contarNos</span>()</code></li>
+                  <li><code><span class="syn-keyword">private</span> <span class="syn-keyword">int</span> <span class="syn-method">contarNos</span>(<span class="syn-type">No</span> <span class="syn-variable">no</span>)</code></li>
+                </ol>
+              </div>
+            </div>
+            Apresente a implementação recursiva e explique como o cálculo é propagado a partir das folhas até a raiz.
+          </div>
+        </li>
+
+        <li class="subquestion-item">
+          <div class="subquestion-title">Depuração e Teste de Métricas</div>
+          <div class="subquestion-desc">
+            Como você testaria os métodos <code>altura()</code> e <code>contarNos()</code> nos seguintes cenários:
+            <ul style="margin: 0.5rem 0 0 1.5rem;">
+              <li>Árvore vazia (sem nenhum nó inserido).</li>
+              <li>Árvore com apenas 1 nó (a raiz).</li>
+              <li>Árvore completa com 7 nós.</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="page-footer">
+      UNICAP — Universidade Católica de Pernambuco | Disciplina: INF1927 — Árvores e Ordenação de Dados
+    </footer>
+  </div>
+</body>
+</html>

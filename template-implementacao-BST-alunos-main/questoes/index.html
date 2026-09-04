@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questões de Avaliação — Árvore Binária de Busca (BST)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <h1>Árvore Binária de Busca (BST)</h1>
+      <p class="subtitle">Questões de avaliação prática sobre o código a ser implementado no pacote src.</p>
+    </header>
+
+    <section class="card">
+      <h2 class="card-title">Instruções aos Estudantes</h2>
+      <p class="statement" style="margin-bottom: 0.75rem;">
+        As questões devem ser respondidas de forma <strong>manuscrita</strong> e os arquivos correspondentes (fotos legíveis ou PDF digitalizado) devem ser inseridos na pasta <code>respostas/</code> do repositório.
+      </p>
+      <p class="statement" style="margin-bottom: 0.5rem;">
+        O estudante é responsável por compreender integralmente todo o código submetido. Durante a avaliação, poderá ser solicitado a explicar, executar, depurar ou modificar qualquer trecho de sua implementação. A incapacidade de explicar ou modificar o código poderá resultar na perda da pontuação correspondente à implementação.
+      </p>
+    </section>
+
+    <section class="card tad-card">
+      <h2 class="card-title">Definição do TAD</h2>
+      <div class="tad-editor-grid">
+        <article class="vscode-editor" aria-labelledby="no-java-title">
+          <div class="vscode-tabs">
+            <div class="vscode-tab" id="no-java-title">
+              <span class="java-file-icon" aria-hidden="true">J</span>
+              No.java
+            </div>
+          </div>
+          <div class="vscode-code" role="region" aria-label="Código da classe No">
+            <ol>
+              <li><code><span class="syn-keyword">public</span> <span class="syn-keyword">class</span> <span class="syn-type">No</span> {</code></li>
+              <li><code>    <span class="syn-keyword">public</span> <span class="syn-type">Integer</span> <span class="syn-variable">chave</span>;</code></li>
+              <li><code>    <span class="syn-keyword">public</span> <span class="syn-type">No</span> <span class="syn-variable">esquerda</span>;</code></li>
+              <li><code>    <span class="syn-keyword">public</span> <span class="syn-type">No</span> <span class="syn-variable">direita</span>;</code></li>
+              <li><code>&nbsp;</code></li>
+              <li><code>    <span class="syn-keyword">public</span> <span class="syn-method">No</span>(<span class="syn-type">Integer</span> <span class="syn-variable">valor</span>) {</code></li>
+              <li><code>        <span class="syn-keyword">this</span>.<span class="syn-variable">chave</span> = <span class="syn-variable">valor</span>;</code></li>
+              <li><code>        <span class="syn-keyword">this</span>.<span class="syn-variable">esquerda</span> = <span class="syn-keyword">null</span>;</code></li>
+              <li><code>        <span class="syn-keyword">this</span>.<span class="syn-variable">direita</span> = <span class="syn-keyword">null</span>;</code></li>
+              <li><code>    }</code></li>
+              <li><code>}</code></li>
+            </ol>
+          </div>
+          <div class="vscode-statusbar">
+            <span>Nó da árvore</span>
+            <span>Java</span>
+          </div>
+        </article>
+
+        <article class="vscode-editor" aria-labelledby="bst-java-title">
+          <div class="vscode-tabs">
+            <div class="vscode-tab" id="bst-java-title">
+              <span class="java-file-icon" aria-hidden="true">J</span>
+              BST.java
+            </div>
+          </div>
+          <div class="vscode-code" role="region" aria-label="Estrutura da classe BST">
+            <ol>
+              <li><code><span class="syn-keyword">import</span> java.util.<span class="syn-type">LinkedList</span>;</code></li>
+              <li><code>&nbsp;</code></li>
+              <li><code><span class="syn-keyword">public</span> <span class="syn-keyword">class</span> <span class="syn-type">BST</span> {</code></li>
+              <li><code>    <span class="syn-keyword">public</span> <span class="syn-type">No</span> <span class="syn-variable">raiz</span>;</code></li>
+              <li><code>    <span class="syn-keyword">public</span> <span class="syn-type">LinkedList</span>&lt;<span class="syn-type">Integer</span>&gt; <span class="syn-variable">preOrdem</span>;</code></li>
+              <li><code>    <span class="syn-keyword">public</span> <span class="syn-type">LinkedList</span>&lt;<span class="syn-type">Integer</span>&gt; <span class="syn-variable">emOrdem</span>;</code></li>
+              <li><code>    <span class="syn-keyword">public</span> <span class="syn-type">LinkedList</span>&lt;<span class="syn-type">Integer</span>&gt; <span class="syn-variable">posOrdem</span>;</code></li>
+              <li><code>&nbsp;</code></li>
+              <li><code>    <span class="syn-comment">// Inserção e remoção</span></code></li>
+              <li><code>    <span class="syn-keyword">public</span> <span class="syn-keyword">void</span> <span class="syn-method">inserir</span>(<span class="syn-type">Integer</span> <span class="syn-variable">chave</span>) { }</code></li>
+              <li><code>    <span class="syn-keyword">private</span> <span class="syn-type">No</span> <span class="syn-method">inserir</span>(<span class="syn-type">No</span> <span class="syn-variable">no</span>, <span class="syn-type">Integer</span> <span class="syn-variable">chave</span>) { <span class="syn-keyword">return</span> <span class="syn-keyword">null</span>; }</code></li>
+              <li><code>    <span class="syn-keyword">public</span> <span class="syn-keyword">void</span> <span class="syn-method">remover</span>(<span class="syn-type">Integer</span> <span class="syn-variable">chave</span>) { }</code></li>
+              <li><code>    <span class="syn-keyword">private</span> <span class="syn-type">No</span> <span class="syn-method">remover</span>(<span class="syn-type">No</span> <span class="syn-variable">no</span>, <span class="syn-type">Integer</span> <span class="syn-variable">chave</span>) { <span class="syn-keyword">return</span> <span class="syn-keyword">null</span>; }</code></li>
+              <li><code>    <span class="syn-keyword">private</span> <span class="syn-type">No</span> <span class="syn-method">menorDireita</span>(<span class="syn-type">No</span> <span class="syn-variable">no</span>) { <span class="syn-keyword">return</span> <span class="syn-keyword">null</span>; }</code></li>
+              <li><code>&nbsp;</code></li>
+              <li><code>    <span class="syn-comment">// Percursos em profundidade</span></code></li>
+              <li><code>    <span class="syn-keyword">public</span> <span class="syn-keyword">void</span> <span class="syn-method">preOrdem</span>() { }</code></li>
+              <li><code>    <span class="syn-keyword">public</span> <span class="syn-keyword">void</span> <span class="syn-method">emOrdem</span>() { }</code></li>
+              <li><code>    <span class="syn-keyword">public</span> <span class="syn-keyword">void</span> <span class="syn-method">posOrdem</span>() { }</code></li>
+              <li><code>}</code></li>
+            </ol>
+          </div>
+          <div class="vscode-statusbar">
+            <span>Árvore binária de busca</span>
+            <span>Java</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="questions-grid">
+      <!-- Questão 1 -->
+      <a href="questao-01-insercao.html" class="question-card-link">
+        <div class="card question-card">
+          <div>
+            <div class="q-num">Questão 01</div>
+            <h3>Implementação da Inserção em BST</h3>
+            <p>Explicação da lógica recursiva de <code>inserir(no, chave)</code>, caso base com <code>no == null</code>, encadeamento com nós pais e tratamento de chaves duplicadas.</p>
+          </div>
+          <div class="question-card-footer">
+            <span>Acessar Enunciado</span>
+            <span>→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Questão 2 -->
+      <a href="questao-02-remocao.html" class="question-card-link">
+        <div class="card question-card">
+          <div>
+            <div class="q-num">Questão 02</div>
+            <h3>Implementação da Remoção e os Três Casos</h3>
+            <p>Tratamento de nó folha (caso 1), nó com um filho que "sobe" (caso 2), nó com dois filhos (caso 3) e remoção da raiz ou elementos inexistentes.</p>
+          </div>
+          <div class="question-card-footer">
+            <span>Acessar Enunciado</span>
+            <span>→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Questão 3 -->
+      <a href="questao-03-menor-direita.html" class="question-card-link">
+        <div class="card question-card">
+          <div>
+            <div class="q-num">Questão 03</div>
+            <h3>Implementação do Método menorDireita</h3>
+            <p>Lógica do método auxiliar <code>menorDireita(no)</code>, garantia de ausência de filho à esquerda no substituto e comparação com o antecessor.</p>
+          </div>
+          <div class="question-card-footer">
+            <span>Acessar Enunciado</span>
+            <span>→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Questão 4 -->
+      <a href="questao-04-travessias.html" class="question-card-link">
+        <div class="card question-card">
+          <div>
+            <div class="q-num">Questão 04</div>
+            <h3>Implementação das Travessias e Listas</h3>
+            <p>Estruturação dos métodos públicos e privados de <code>preOrdem</code>, <code>emOrdem</code> e <code>posOrdem</code>, gerenciamento das instâncias de <code>LinkedList</code> e ordenação natural.</p>
+          </div>
+          <div class="question-card-footer">
+            <span>Acessar Enunciado</span>
+            <span>→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Questão 5 -->
+      <a href="questao-05-extensao-busca.html" class="question-card-link">
+        <div class="card question-card">
+          <div>
+            <div class="q-num">Questão 05</div>
+            <h3>Extensão do TAD: Implementação do Método buscar</h3>
+            <p>Adição do método <code>buscar(chave)</code> (recursivo ou iterativo), condições de parada e implementação de <code>buscarMenor()</code> e <code>buscarMaior()</code>.</p>
+          </div>
+          <div class="question-card-footer">
+            <span>Acessar Enunciado</span>
+            <span>→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Questão 6 -->
+      <a href="questao-06-extensao-metricas.html" class="question-card-link">
+        <div class="card question-card">
+          <div>
+            <div class="q-num">Questão 06</div>
+            <h3>Extensão do TAD: Métodos de Altura e Contagem</h3>
+            <p>Adição e teste dos métodos recursivos <code>altura()</code> e <code>contarNos()</code> com tratamento rigoroso de árvore vazia e folhas.</p>
+          </div>
+          <div class="question-card-footer">
+            <span>Acessar Enunciado</span>
+            <span>→</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <footer class="page-footer">
+      INF1927 — Árvores e Ordenação de Dados
+    </footer>
+  </div>
+</body>
+</html>

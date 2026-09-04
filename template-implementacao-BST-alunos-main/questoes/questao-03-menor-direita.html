@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questão 3 — Implementação do Método menorDireita</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="nav-back">← Voltar ao Sumário de Questões</a>
+
+    <header class="page-header">
+      <div class="discipline-title">INF1927 — Árvores e Ordenação de Dados</div>
+      <div class="header-badges">
+        <span class="badge badge-dark">Questão 03</span>
+      </div>
+      <h1>Implementação do Método menorDireita</h1>
+      <p class="subtitle">Explicação e defesa da lógica do método auxiliar menorDireita(No no) em BST.java.</p>
+    </header>
+
+    <section class="card">
+      <h2 class="card-title">Contexto da Implementação</h2>
+      <p class="statement code-context">No arquivo <code>src/BST.java</code>, foi definido o método auxiliar privado:</p>
+      <div class="vscode-editor code-snippet" aria-labelledby="menor-direita-code-title">
+        <div class="vscode-tabs">
+          <div class="vscode-tab" id="menor-direita-code-title">
+            <span class="java-file-icon" aria-hidden="true">J</span>
+            BST.java
+          </div>
+        </div>
+        <div class="vscode-code" role="region" aria-label="Método menorDireita">
+          <ol>
+            <li><code><span class="syn-keyword">private</span> <span class="syn-type">No</span> <span class="syn-method">menorDireita</span>(<span class="syn-type">No</span> <span class="syn-variable">no</span>)</code></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">Itens de Avaliação</h2>
+      <ul class="subquestions-list">
+        <li class="subquestion-item">
+          <div class="subquestion-title">Lógica de Busca do Menor Elemento</div>
+          <div class="subquestion-desc">
+            Apresente e explique como você implementou o método <code>menorDireita(No no)</code>. Como o seu código navega pelos nós a partir da subárvore informada até encontrar o menor elemento?
+          </div>
+        </li>
+
+        <li class="subquestion-item">
+          <div class="subquestion-title">Propriedades Estruturais do Nó Retornado</div>
+          <div class="subquestion-desc">
+            Com base na sua implementação:
+            <ul style="margin: 0.5rem 0 0 1.5rem;">
+              <li>Por que o nó retornado por <code>menorDireita</code> é garantido de nunca possuir um filho à esquerda (<code>no.esquerda == null</code>)?</li>
+              <li>O nó retornado pode possuir um filho à direita? Se sim, como o método <code>remover</code> lida com esse filho direito ao desvincular o substituto de sua posição original?</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="subquestion-item">
+          <div class="subquestion-title">Alternativa: Maior Elemento da Subárvore Esquerda</div>
+          <div class="subquestion-desc">
+            Se optássemos por substituir o nó removido pelo <strong>maior nó da subárvore esquerda</strong> (antecessor) em vez do menor da direita:
+            <ul style="margin: 0.5rem 0 0 1.5rem;">
+              <li>Como seria a implementação do método equivalente (por exemplo, <code>maiorEsquerda(No no)</code>)?</li>
+              <li>Quais alterações seriam necessárias na chamada dentro de <code>remover</code>?</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="page-footer">
+      UNICAP — Universidade Católica de Pernambuco | Disciplina: INF1927 — Árvores e Ordenação de Dados
+    </footer>
+  </div>
+</body>
+</html>

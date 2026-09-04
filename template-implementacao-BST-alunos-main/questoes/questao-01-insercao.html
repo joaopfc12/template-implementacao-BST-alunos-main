@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questão 1 — Implementação da Inserção em BST</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="nav-back">← Voltar ao Sumário de Questões</a>
+
+    <header class="page-header">
+      <div class="discipline-title">INF1927 — Árvores e Ordenação de Dados</div>
+      <div class="header-badges">
+        <span class="badge badge-dark">Questão 01</span>
+      </div>
+      <h1>Implementação da Inserção em BST</h1>
+      <p class="subtitle">Explicação e defesa da lógica de inserção implementada no arquivo BST.java.</p>
+    </header>
+
+    <section class="card">
+      <h2 class="card-title">Contexto da Implementação</h2>
+      <p class="statement code-context">No arquivo <code>src/BST.java</code>, você deve implementar os métodos de inserção:</p>
+      <div class="vscode-editor code-snippet" aria-labelledby="insercao-code-title">
+        <div class="vscode-tabs">
+          <div class="vscode-tab" id="insercao-code-title">
+            <span class="java-file-icon" aria-hidden="true">J</span>
+            BST.java
+          </div>
+        </div>
+        <div class="vscode-code" role="region" aria-label="Métodos de inserção">
+          <ol>
+            <li><code><span class="syn-keyword">public</span> <span class="syn-keyword">void</span> <span class="syn-method">inserir</span>(<span class="syn-type">Integer</span> <span class="syn-variable">chave</span>)</code></li>
+            <li><code><span class="syn-keyword">private</span> <span class="syn-type">No</span> <span class="syn-method">inserir</span>(<span class="syn-type">No</span> <span class="syn-variable">no</span>, <span class="syn-type">Integer</span> <span class="syn-variable">chave</span>)</code></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">Itens de Avaliação</h2>
+      <ul class="subquestions-list">
+        <li class="subquestion-item">
+          <div class="subquestion-title">Caso Base e Criação de Novos Nós</div>
+          <div class="subquestion-desc">
+            Mostre e explique como a sua implementação trata o caso base da recursão quando encontra uma referência nula (<code>no == null</code>), incluindo a criação da nova instância de <code>No</code> com a chave informada.
+          </div>
+        </li>
+
+        <li class="subquestion-item">
+          <div class="subquestion-title">Decisão de Navegação e Encadeamento</div>
+          <div class="subquestion-desc">
+            Explique a lógica de decisão utilizada para navegar para a subárvore esquerda ou direita. Como o seu código garante que o nó recém-criado seja corretamente conectado ao seu respectivo nó pai através do retorno do método privado?
+          </div>
+        </li>
+
+        <li class="subquestion-item">
+          <div class="subquestion-title">Primeira Inserção e Chaves Duplicadas</div>
+          <div class="subquestion-desc">
+            Com base no seu código:
+            <ul style="margin: 0.5rem 0 0 1.5rem;">
+              <li>Como o atributo <code>this.raiz</code> é atualizado na primeira inserção quando a árvore está vazia?</li>
+              <li>O que a sua implementação faz se uma chave já existente for inserida novamente?</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="page-footer">
+      UNICAP — Universidade Católica de Pernambuco | Disciplina: INF1927 — Árvores e Ordenação de Dados
+    </footer>
+  </div>
+</body>
+</html>

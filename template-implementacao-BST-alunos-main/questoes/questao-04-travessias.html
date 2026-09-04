@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questão 4 — Implementação das Travessias e Listas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="nav-back">← Voltar ao Sumário de Questões</a>
+
+    <header class="page-header">
+      <div class="discipline-title">INF1927 — Árvores e Ordenação de Dados</div>
+      <div class="header-badges">
+        <span class="badge badge-dark">Questão 04</span>
+      </div>
+      <h1>Implementação das Travessias e Listas</h1>
+      <p class="subtitle">Explicação e defesa da implementação dos métodos de caminhamento e preenchimento de LinkedList.</p>
+    </header>
+
+    <section class="card">
+      <h2 class="card-title">Contexto da Implementação</h2>
+      <p class="statement code-context">No arquivo <code>src/BST.java</code>, a classe possui os atributos:</p>
+      <div class="vscode-editor code-snippet" aria-labelledby="travessias-code-title">
+        <div class="vscode-tabs">
+          <div class="vscode-tab" id="travessias-code-title">
+            <span class="java-file-icon" aria-hidden="true">J</span>
+            BST.java
+          </div>
+        </div>
+        <div class="vscode-code" role="region" aria-label="Atributos das travessias">
+          <ol>
+            <li><code><span class="syn-keyword">public</span> <span class="syn-type">LinkedList</span>&lt;<span class="syn-type">Integer</span>&gt; <span class="syn-variable">preOrdem</span>;</code></li>
+            <li><code><span class="syn-keyword">public</span> <span class="syn-type">LinkedList</span>&lt;<span class="syn-type">Integer</span>&gt; <span class="syn-variable">emOrdem</span>;</code></li>
+            <li><code><span class="syn-keyword">public</span> <span class="syn-type">LinkedList</span>&lt;<span class="syn-type">Integer</span>&gt; <span class="syn-variable">posOrdem</span>;</code></li>
+          </ol>
+        </div>
+      </div>
+      <p class="statement code-context-note">Esses atributos armazenam os resultados dos métodos correspondentes de caminhamento em profundidade, públicos e privados.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">Itens de Avaliação</h2>
+      <ul class="subquestions-list">
+        <li class="subquestion-item">
+          <div class="subquestion-title">Gerenciamento das Listas nos Métodos Públicos</div>
+          <div class="subquestion-desc">
+            Mostre como você estruturou os métodos públicos <code>preOrdem()</code>, <code>emOrdem()</code> e <code>posOrdem()</code>.
+            <br><br>
+            Por que é importante instanciar uma nova <code>LinkedList&lt;&gt;()</code> antes de disparar a recursão? O que aconteceria se a lista não fosse limpa/recriada e o método fosse chamado múltiplas vezes?
+          </div>
+        </li>
+
+        <li class="subquestion-item">
+          <div class="subquestion-title">A Ordem de Visitação nos Métodos Privados</div>
+          <div class="subquestion-desc">
+            Explique a diferença entre a ordem das instruções em cada um dos seus métodos privados recursivos:
+            <ul style="margin: 0.5rem 0 0 1.5rem;">
+              <li><code>preOrdem(No no)</code> — Visitação do nó atual antes das subárvores.</li>
+              <li><code>emOrdem(No no)</code> — Visitação intercalada entre subárvore esquerda e direita.</li>
+              <li><code>posOrdem(No no)</code> — Visitação do nó atual após ambas as subárvores.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="subquestion-item">
+          <div class="subquestion-title">Ordenação Natural e Teste Prático</div>
+          <div class="subquestion-desc">
+            Com base na sua implementação:
+            <ul style="margin: 0.5rem 0 0 1.5rem;">
+              <li>Demonstre no seu código por que a lista <code>this.emOrdem</code> resulta nos elementos ordenados de forma crescente.</li>
+              <li>Como você demonstraria o funcionamento correto dos três percursos inserindo chaves de exemplo na sua classe <code>BST</code>?</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="page-footer">
+      UNICAP — Universidade Católica de Pernambuco | Disciplina: INF1927 — Árvores e Ordenação de Dados
+    </footer>
+  </div>
+</body>
+</html>
