@@ -1,1 +1,49 @@
 # Pasta para armazenar as respostas manuscritas dos estudantes
+
+Roteiro para as respostas manuscritas — Atividade BST
+
+Apoio rápido pra escrever as respostas à mão, olhando sempre pro código real no BST.java.
+
+Questão 01 — Inserção
+
+O caso base é no == null: não é erro, é o sinal de que achei o lugar certo, e é ali que nasce o new No(chave) (construtor do No.java), já como folha, sem filhos. A comparação chave < no.chave / chave > no.chave decide o lado, e o encadeamento no.esquerda = inserir(no.esquerda, chave) com o return no; no final é o que reconecta a subárvore ao pai. Exemplo: inserir 5 numa árvore vazia (vira raiz) e depois 3 (filho esquerdo de 5).
+
+Questão 02 — Remoção
+
+Folha e nó-com-um-filho caem no mesmo if: quando no.esquerda == null, retorna no.direita — se não tem filho nenhum isso já é null e o nó some; se tem um filho, é ele que sobe no lugar. Por isso não existe bloco separado pra folha.
+
+Com dois filhos, pego o sucessor com menorDireita(no.direita), copio a chave dele pro nó (no.chave = sucessor.chave) e removo o sucessor original chamando remover(no.direita, sucessor.chave), evitando duplicar.
+
+Remover a raiz não pede tratamento especial (this.raiz = remover(this.raiz, chave) já resolve), e chave inexistente só desce até no == null e retorna null sem quebrar nada.
+
+Questão 03 — Menor à direita (menorDireita)
+
+Conferir o enunciado em questao-03-menor-direita.html pra ver se pede algo a mais.
+
+Usa a propriedade de que o menor valor de uma subárvore está sempre no nó mais à esquerda dela. O while (no.esquerda != null) { no = no.esquerda; } desce até não ter mais pra onde ir, e é assim que o remover encontra o sucessor certo pro caso de dois filhos.
+
+Questão 04 — Travessias (preOrdem, emOrdem, posOrdem)
+
+Os três são quase iguais — muda só onde entra o add(no.chave) em relação às chamadas recursivas: preOrdem visita o nó primeiro, emOrdem no meio, posOrdem por último. É por isso que emOrdem sai crescente: sempre visita a subárvore esquerda (menores) antes do nó e a direita (maiores) depois. E não esquecer do .clear() no início de cada método público, pra não acumular valores de chamadas anteriores.
+
+Questão 05 — Extensão: buscar
+
+Implementado com while, iterativo. Para em duas situações: achou (chave.equals(atual.chave) → true) ou atual virou null (não achou → false).
+
+private boolean buscarRecursivo(No no, Integer chave) {
+    if (no == null) return false;
+    if (chave.equals(no.chave)) return true;
+    return chave < no.chave
+        ? buscarRecursivo(no.esquerda, chave)
+        : buscarRecursivo(no.direita, chave);
+}
+
+buscarMenor e buscarMaior usam a mesma ideia: menor valor sempre no nó mais à esquerda a partir da raiz, maior sempre no mais à direita — sem comparação nenhuma, só descer até acabar.
+
+Questão 06 — Extensão: altura e contarNos
+
+altura(): caso base no == null retorna -1 (convenção pra árvore de um nó só dar altura 0); combina os lados com 1 + Math.max(alturaEsquerda, alturaDireita).
+
+contarNos(): árvore vazia conta 0; cada nó soma 1 + o total das duas subárvores (1 + contarNos(no.esquerda) + contarNos(no.direita)), e esse total vai subindo das folhas até a raiz conforme as chamadas recursivas terminam.
+
+Pra testar: árvore vazia dá altura -1 e 0 nós (cai direto no caso base); só a raiz dá altura 0 e 1 nó (1 + max(-1,-1) = 0; 1+0+0 = 1); uma árvore completa de 7 nós dá altura 2 e 7 nós (3 níveis, então altura = níveis - 1).
