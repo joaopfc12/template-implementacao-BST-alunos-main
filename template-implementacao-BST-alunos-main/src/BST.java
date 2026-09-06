@@ -104,14 +104,6 @@ public class BST {
             posOrdem.add(no.chave);
         }
     }
-        private void posOrdem(No no) {
-        if (no != null) {
-            posOrdem(no.esquerda);
-            posOrdem(no.direita);
-            posOrdem.add(no.chave);
-        }
-    }
-
     public boolean buscar(Integer chave) {
         No atual = raiz;
         while (atual != null) {
@@ -147,5 +139,4 @@ public class BST {
         }
         return atual.chave;
     }
-}
 }
