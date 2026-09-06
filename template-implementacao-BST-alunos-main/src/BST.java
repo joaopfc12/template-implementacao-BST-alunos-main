@@ -104,4 +104,48 @@ public class BST {
             posOrdem.add(no.chave);
         }
     }
+        private void posOrdem(No no) {
+        if (no != null) {
+            posOrdem(no.esquerda);
+            posOrdem(no.direita);
+            posOrdem.add(no.chave);
+        }
+    }
+
+    public boolean buscar(Integer chave) {
+        No atual = raiz;
+        while (atual != null) {
+            if (chave.equals(atual.chave)) {
+                return true;
+            } else if (chave < atual.chave) {
+                atual = atual.esquerda;
+            } else {
+                atual = atual.direita;
+            }
+        }
+        return false;
+    }
+
+    public Integer buscarMenor() {
+        if (raiz == null) {
+            return null;
+        }
+        No atual = raiz;
+        while (atual.esquerda != null) {
+            atual = atual.esquerda;
+        }
+        return atual.chave;
+    }
+
+    public Integer buscarMaior() {
+        if (raiz == null) {
+            return null;
+        }
+        No atual = raiz;
+        while (atual.direita != null) {
+            atual = atual.direita;
+        }
+        return atual.chave;
+    }
+}
 }
