@@ -1,13 +1,15 @@
 public class TesteBST {
     public static void main(String[] args) {
-        BST arvore = new BST();
-        arvore.inserir(5);
-        arvore.inserir(3);
-        arvore.inserir(8);
+        BST vazia = new BST();
+        System.out.println("Vazia -> altura: " + vazia.altura() + ", contarNos: " + vazia.contarNos());
 
-        System.out.println("buscar(3): " + arvore.buscar(3));
+        BST umNo = new BST();
+        umNo.inserir(5);
+        System.out.println("1 nó -> altura: " + umNo.altura() + ", contarNos: " + umNo.contarNos());
 
-        arvore.emOrdem();
-        System.out.println("emOrdem: " + arvore.emOrdem);
+        BST completa = new BST();
+        int[] valores = {4, 2, 6, 1, 3, 5, 7};
+        for (int v : valores) completa.inserir(v);
+        System.out.println("7 nós -> altura: " + completa.altura() + ", contarNos: " + completa.contarNos());
     }
 }

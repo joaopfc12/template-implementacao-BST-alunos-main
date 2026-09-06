@@ -139,4 +139,27 @@ public class BST {
         }
         return atual.chave;
     }
+    public int altura() {
+    return altura(raiz);
+}
+
+private int altura(No no) {
+    if (no == null) {
+        return -1;
+    }
+    int alturaEsquerda = altura(no.esquerda);
+    int alturaDireita = altura(no.direita);
+    return 1 + Math.max(alturaEsquerda, alturaDireita);
+}
+
+public int contarNos() {
+    return contarNos(raiz);
+}
+
+private int contarNos(No no) {
+    if (no == null) {
+        return 0;
+    }
+    return 1 + contarNos(no.esquerda) + contarNos(no.direita);
+}
 }
